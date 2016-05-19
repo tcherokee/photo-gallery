@@ -36,7 +36,7 @@ function createMediaArrayAll() {
   //the mediaArrayAll array. This is for resetting purposes
   $("div.media-container").each(function(){
     mediaArrayAll.push($(this).children().get(0));
-  })
+  });
 
 }
 
@@ -50,7 +50,7 @@ function createMediaArrayVisible() {
     if ($(this).css("display") !== "none") {
       mediaArrayVisible.push($(this).children().get(0));
     }
-  })
+  });
 
 }
 
@@ -202,7 +202,7 @@ function nextImage(){
 
 function closeLightbox(c) {
     //Reset overlay
-    $overlay = $('<div class="overlay"></div>')
+    $overlay = $('<div class="overlay"></div>');
     $(c).remove();
     mediaArrayVisible = [];
 }
@@ -231,14 +231,14 @@ $("body").on("keyup", function(e) {
 // function searchMedia() {
 $("#search-box").on("focus", function() {
 
-  createMediaArrayAll()
+  createMediaArrayAll();
   createMediaArrayVisible();
   // var originalArray = mediaArray;
 
   // console.log(originalArray);
 
   $("#search-box").on("keyup", function(e) {
-    var searchValue = $(this).val()
+    var searchValue = $(this).val();
     for (var i = 0; i < mediaArrayVisible.length; i += 1) {
 
       mediaArrayVisible = mediaArrayAll;
@@ -254,7 +254,7 @@ $("#search-box").on("focus", function() {
     }
     createMediaArrayVisible();
   });
-})
+});
 
   //Add on click event to the images
   $mediaContainerA.on("click", function(){
@@ -276,7 +276,8 @@ $("body").on("click keyup", ".overlay", function(event){
   } else {
     closeLightbox(this);
   }
-})
+});
+
 $("body").on("keyup", function(e){
   if (e.which === 27) {
     closeLightbox($(this).find(".overlay"));
