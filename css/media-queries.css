@@ -1,0 +1,37 @@
+@media (min-width: 461px) {
+
+    /** Search Form ***************************/
+    #search-box {
+      max-width: 460px;
+    }
+}
+
+@media (min-width: 480px) {
+
+  /* Pictures *****************************/
+  .media-container {
+    width: auto;
+    display: inline-block;
+  }
+
+}
+
+
+@media (min-width: 568px) {
+
+}
+
+
+@media (min-width: 768px) {
+
+      /** General Styles ************************/
+      h1 {
+        font-size: 2.75em;
+      }
+
+      /* Pictures *****************************/
+      #main-wrap {
+        margin-top:171px;
+      }
+
+}

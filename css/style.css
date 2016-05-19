@@ -1,0 +1,171 @@
+/* General Styles ***********************/
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Merienda', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75em;
+  margin: 0.3125em;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+#main-wrap {
+  background: #f4f4f4;
+  margin-top:139px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header *******************************/
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(255,255,255,1);
+  width: 100%;
+  padding-bottom:1.75em;
+  z-index: 5;
+}
+
+/* Search Form **************************/
+
+#search-form label {
+  display: none;
+}
+
+#search-box {
+  display: block;
+  max-width: 90%;
+  height: 1.75em;
+  padding: 1.5em 1.725em;
+  margin: 0 auto;
+  font-family: 'Merienda', cursive;
+}
+
+/* Pictures *****************************/
+
+.media-container {
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+  font-size: 1em;
+}
+
+.pic-vid-container {
+  margin:0px -30px 0px -30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0;
+}
+
+.pic-vid-container a {
+  display: block;
+  background: #fff;
+  -webkit-box-shadow: 0px 9px 10px -8px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 9px 10px -8px rgba(0,0,0,1);
+  box-shadow: 0px 9px 10px -8px rgba(0,0,0,1);
+}
+
+.pic-vid-container a:hover {
+  -webkit-box-shadow: 0px 9px 24px -8px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 9px 24px -8px rgba(0,0,0,1);
+  box-shadow: 0px 9px 24px -8px rgba(0,0,0,1);
+}
+
+.pic-vid-container img {
+  vertical-align: top;
+}
+
+.pic-vid-container .video:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../img/play.png") no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  opacity: 0.7;
+}
+
+/* Overlay ******************************/
+
+.overlay {
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0,0,0,0.7);
+  z-index: 10;
+  text-align: center;
+}
+
+.overlay img {
+  width: 80%;
+}
+
+.overlay p {
+  display: inline-block;
+}
+
+.imgWrap {
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 1);
+  margin: 0px;
+  padding: 10px 10px 0 10px;
+  transition: 1s;
+}
+
+.overlay .arrowContainerL,
+.overlay .arrowContainerR {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.overlay .arrowContainerL img,
+.overlay .arrowContainerR img {
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+}
+
+.overlay .arrowContainerL:hover img,
+.overlay .arrowContainerR:hover img {
+  opacity: 0.7;
+  transition: 1s;
+}
+
+.arrowContainerR {
+  right: 1%;
+}
+
+.arrowContainerL {
+  left: 1%;
+}
