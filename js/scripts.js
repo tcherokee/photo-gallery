@@ -19,7 +19,6 @@ $(document).ready(function(){
 
 
 //Declaring Variables
-var $mediaContainer = $(".media-container");
 var $mediaContainerA = $(".media-container a");
 var $overlay = $('<div class="overlay"></div>');
 var imagePointer;
@@ -64,7 +63,7 @@ function showClickedMedia(a) {
   clickedArrayIndex = mediaArrayVisible.indexOf(a);
 
   //Call append image function, append it to the document body and assign it to a variable
-  var combinedHTML = $("body").append(appendImage(a));
+  $("body").append(appendImage(a));
 
   //Find the image in the newly appended HTML & Assign to variable
   imagePointer = $(".overlay").find(".lightbox");
@@ -283,21 +282,6 @@ $("body").on("keyup", function(e){
     closeLightbox($(this).find(".overlay"));
   }
 });
-
-
-
-//Using jquery to add nth-child rules since CSS doesn't differentiate between
-//visible and non visible elements.
-// $("body").on("load", function(){
-  var m = 0;
-  $('div.media-container:visible').each(function(index,el) {
-   if((index+1)%(4*m+5) === 0) {
-     $(this).addClass('clear');
-     m += 1;
-   }
-  });
-// })
-
 
 
 });
